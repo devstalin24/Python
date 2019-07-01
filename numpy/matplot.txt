@@ -1,0 +1,9 @@
+To upgrade pip  -  python -m pip install --upgrade  pip
+command to install matplot  -- pip install matplotlib
+pyplot
+
+import matplotlib.pyplot as plt 
+plt.plot([1, 2, 3, 4])   - single live value will take as y axis and will generate corresponding x value 
+plt.ylabel('some numbers')
+plt.show()
+

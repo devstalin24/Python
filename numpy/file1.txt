@@ -1,0 +1,4 @@
+Aman,100
+Ajay,200
+Akash,300
+Arun,400

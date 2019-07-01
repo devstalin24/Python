@@ -1,0 +1,28 @@
+Descriptive Statistics
+
+
+Image Source : https://www.onlinebooksreview.com/articles/best-probability-and-statistics-books
+
+
+Descriptive Statistics , provides a summary of your dataset giving a measure of the centre, dispersion and shape of your data. 
+Here the data is described as a sample of the whole population, and there are no inferences made from the sample to the whole population, 
+unlike Inferential Statistics, in which we model the data on the basis of probability theory.
+
+In this notebook, we will be focussing on three key elements of Descriptive Statistics : 
+
+Measures Of Central Tendency
+
+Mean
+Median
+Mode 
+
+Measures Of Spread
+
+Range
+Outliers
+Interquantile Range
+Variance 
+
+Dependence
+
+Correlation v/s Causation

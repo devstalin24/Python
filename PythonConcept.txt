@@ -1,0 +1,241 @@
+Python Concept 
+46 - 69 ---3
+70-81 --4
+82 108 -5
+109-113 -6
+114 -125 -7
+128 - 136 - 8
+140-149 --11
+152 - 164 -13
+176-   14
+177 182--15
+183 - 202 -16
+203 2011 -17
+
+
+------ ---------------------------------------------------------------------------
+Escape Sequences
+\" , \n -  new line , \b  - backspace , \t - tab  
+
+print(r"\n")   -output   \n   -  r i used for normail tesxt 
+
+
+---------------------------------------------------------------------------------
+Variables
+ first letter -  letter or _
+ snake case writing 
+ 
+ -----------------------------------------------------------------
+ String 
+ 
+ Sting indaxing
+left to right  -  +v flow  
+right to left  -ve flow 
+ name  = "Aman"
+ name[0] =  A
+ name[-1] = n
+ 
+ String Slicing 
+ string[start argument, stop argument , step argument]
+ 
+ reverse string 
+ rev =  name[::-1]
+ 
+ String function and method 
+ ----
+ len -  to find the length of the string 
+ length =  len(name) = 4
+ 
+ capitalize()  ---   name.capitalize() =    Aman
+ string.count(value, start, end) =  name.count(A,0,-1)  --  start , end are optiona;
+ string.endswith(value, start, end)
+ string.find(value, start, end) --start , end are optiona;
+ 
+ str.replace(old, new [, count]) 
+ 
+ 
+ 
+ 
+ 
+
+
+Print() function 
+map function(
+map(function_name, variables)
+
+*args 
+it contating tuple and all values/list are stored in tulple
+----------------------
+Zip function 
+Zip(list1, list2,list3)  -- output  tuple (value of list1, value of list2,list3)
+
+Example 
+
+list1 = ["user1", "User2","User3"]
+list2 = ["Aman","Ajay","Akash"]
+result = zip(list1,list2)   # - --output will be iterator object  
+print(list(result)  -  [(User1,Aman),(User2,Ajay),(User3,Akash)]
+
+*operator with ZIP
+zip(*result)  -  output  - tuple  with first element of result tuple will go into one tuple and second element of result tuple go into one tuple
+
+Example 
+
+list(zip(*result))  =  [("user1","User2","User3"),("Aman","Ajay","Akash")]
+l1, l2 = list(zip(*result)) --- output  == l1["user1", "User2","User3"] , l2 ["Aman","Ajay","Akash"]
+
+----------------
+any , all functuon 
+
+all
+
+all will   rturn true if all element are true else false
+example
+
+leven_result = lambda l:all([True if i%2==0 else False for i in l])
+print(leven_result([1,2,3,4,5,6,7,8]))   #-- output  -  false 
+
+leven_result = lambda l:all([True if i%2==0 else False for i in l])
+print(leven_result([2,4,6,8])) # -- output Ture
+
+
+any 
+will return true if any true value in present in list
+
+-------------
+Advance min() and max() function
+
+return the maximun value 
+
+i f we want to find the string that has maximum length
+list1 = ["Aman","Ajay","Akash"]
+print(max(list1 , key = (lambda items: len(items))))
+
+
+stu = {
+    "a ":{"s":90,"a":24},
+    "m":{"s":75,"a":19},
+    "r":{"s":76,"a":23}
+}
+
+print(max(stu, key = lambda itm:stu[itm]["s"]))
+
+-----
+Advance sorted function
+
+sort method will not work for tuple
+we have use sorted function , and it will return list as tuple as immutable so it will not modify tuple 
+example 
+list1 = ("YAman","Ajay","KAkash")
+result  =  sorted(list1)
+print(result)
+
+same thing with set 
+{}
+
+sorted(dictonary, key = func , reverse = true)
+
+----
+doc string
+pritnt the value in """vxcbv""" inside the function
+helps to understand the what function will do
+syntex
+function_name.__doc__
+
+---
+pass function as argument
+generator  function_name
+yield keword is used to store value in generator
+
+Example 
+
+n = 20
+def gen_Ex(value):
+    for i in range(1,value+1):
+		if i%2==0:
+			yield i
+
+es = gen_Ex(n)
+
+for i in es:
+    print(i)
+
+
+using genetarot comp 
+
+n = 20
+def gen_Ex(value):
+    return (i for i in range(1,value+1) if i%2==0 )
+
+es = gen_Ex(n)
+
+for i in es:
+    print(i)
+
+ 
+ Object oriented programming 
+         self.name  =  name
+        self.model = model
+        self.price = price
+
+l1 =  Laptop("HP","200TU",32000)
+print(l1.name)
+print(l1.model)
+print(l1.price)
+
+
+INSTANCE MeTHOD
+class Laptop:
+    def __init__(self,name,model,price):
+        self.name  =  name
+        self.model = model
+        self.price = price
+    def full_name(self):  # instance method
+        return f"{self.name} {self.model}"
+
+l1 =  Laptop("HP","200TU",32000)
+print(l1.name)
+print(l1.model)
+print(l1.price)
+
+print(l1.full_name())
+ 
+ 
+ ----------Debugging -------------------
+ import pdb
+ pdb.set_trace()
+ l -  to chek the current line 
+ n- to execute current line
+ q - quit debugging
+ c -to execute all code 
+ 
+ 
+ ----------Working with FIle----------------- 
+ Open function 
+ 
+ open('path' ,r)  r is used to read the file -- by default mode is read method 
+ read()  -  will read all text file 
+ readline() will read one line  
+ readlines() - will combine all line into one lines 
+to print all data as septate  
+
+a  = f.readlines()
+for line in a 
+	print(a,end='')
+ f =  open()
+ f.tell() -  to check the cursor position 
+ f.seek(integer) -  changing the cursor position 
+ 
+ 
+ 
+ write
+ with open() as f
+ 
+ 
+ 
+ 
+ working with CSV file 
+ 
+ import csv 
+ 
+ 

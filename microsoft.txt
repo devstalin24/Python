@@ -1,0 +1,757 @@
+58	
+55
+165
+72
+152
+
+
+1.Given a sorted integer array, print all distinct elements in array. 
+The given array may contain duplicates and the output should print every element only once.
+solved -  pyhton , Java
+
+Solution :
+
+
+
+
+
+
+2. Given a sorted integer array, print all elements that appear only once in array. 
+The given array may contain duplicates and the output should print every element only once.
+solved -  python , java
+
+Solution :
+
+public void singleElement(){Map<Integer,Integer> m1=new HashMap<Integer,Integer>(); 
+    for(int i =0;i<b.length;i++){Integer v = m1.get(b[i]); m1.put(b[i],(v==null)?1:v+1);}
+    for(Map.Entry<Integer,Integer> val : m1.entrySet()){if(val.getValue()==1){
+    System.out.print(val.getKey() +" ");}}}
+
+
+
+def sinlge_element_dic() :
+    di ={}
+    for i in list1:
+         di[i] = list1.count(i) 
+    for p,q in di.items():
+        if q ==1:
+            print(p)
+			
+3.  rotate the sorted array 
+
+
+public int[] r(int az[],int p){int[] array4  =  new int[az.length];
+    int k =0;for(int i = p;i<az.length;i++){array4[k] = az[i];k++;}
+    for (int i =0;i<p;i++){array4[k] = az[i];k++;}return array4;
+    } 
+
+def rotate_array():
+    rl = list3[position::]
+    rl.extend(list3[:position:])
+    print(rl)
+rotate_array()
+
+
+
+
+
+4. search in rotated array  
+
+public String rAs(int[]az, int sel){
+        int l  = 0;
+        int h = az.length-1;
+    while (l<=h)
+    {int m = (l + h) / 2;
+        //System.out.println(az[m] +"  "+ m);
+        if (az[m] == sel){return m+"";}
+        if (az[l]<=az[m]){if(sel>=az[l] && sel<=az[m]){h = m-1;}else{l = m+1;}}
+        else{ if (sel >= az[m] && sel <= az[h]) {l =  m+1;}else{h =m-1;}}
+	}return "n";
+}
+
+
+5 The Celebrity Problem   -  not solved 
+
+6.  Search Word “Microsoft” in a 2D matrix of characters.    -  half solved 
+
+		search in rows
+		search in coloumn 
+		search in digonal 
+
+7. There are n petrol bunks located in a circle. We have a car with mileage 1kmpl. 
+The distances between petrol bunks and no of litres petrol available at each petrol bunk is given. 
+Need to find the starting point such that car can visit entire circle.   -  not solved 
+
+8. Given n*n matrix with some elements in each cell. If there is “0” in any cell then we have to make that corresponding row and column to “0”
+Time complexity: O(n*n) Space complexity: O(1)
+
+9. Given an array of elements with size n. You should find the number which is repeated more than n/2 times
+Time complexity: O(n)
+
+10. Given sorted array of numbers and a sum. we have to find any two numbers whose sum is equal to the given sum.
+
+Given Binary tree with parent pointer and two nodes. Find LCA of the given two nodes in a given binary tree
+
+
+Given two linked lists. Find the intersection point of those two linkedlists
+Its based on Binary tree. I forgot the question 🙂
+Design discussion on Search functionality available in smart phones
+
+
+Round 4:
+
+Given a linkedlist with random pointer for each node which points to some random number in the given list. Clone the linkedlist
+filter_none
+brightness_4
+struct ListNode 
+{ 
+ int data; 
+ ListNode *next,*random; 
+}; 
+Design and implement DNS Cache.
+Requirements:
+Cache must be fixed in size and it will be decided by the user who wants to use this cache.
+If the entry is not available in Cache then it should call server to get the details of ipAddress and store it in cache.
+
+
+Round 5:
+
+Print given matrix in spiral order
+I forgot the question. It is related to arrays
+Design discussion on Top Trends feature available in facebook.
+
+
+
+Round 1: (1 hr)
+1. Given 3 sorted arrays. Find the common element of all the arrays in O(N) time and no extra space. If there is none, return false.
+2. Double linked list: 1 goes to the next node and 1 to the random node. Copy this list. Extra space can be used.
+
+Round 2: (45 mins)
+1. Power of a number (x**n) in O(log N) time
+2. Given an array which has a duplicate except for 2 elements. Find them. We always have 2 such element.
+
+Round 3: They said me a bye 🙂
+
+
+Write an algorithm to check if 2 rectangles are overlapping  given their left and right edge coordinates
+
+
+Print a tree in zigzag order. For Example for the given input tree:-
+                1
+            2        3
+        4        5 6        7 
+The output would be:-
+
+1
+3 2
+4 5 6 7
+
+
+
+Skype Round 2: (10 min)
+Find if two given strings are anagrams of each other or not.
+Anagrams example: LISTEN and SILENT.
+Code for the same. Test cases for the code. (Positive and negative)
+
+
+Face2Face Round 1: (45 min)
+
+Question 1:
+Given a character array which each position is filled with either a single digit numbers or a comma,
+Array of 22 characters:-
+image
+Write a code to reply true if we find a set of three set of numbers separated by a comma such that
+X , Y, Z and Z = X + Y
+In the array above 77+22 = 99 so return true.Code for the same with negative test cases.
+
+Question 2:
+If in a given Doubly Circular Linked List a couple of next pointers are corrupted, give the logic to rectify them all.
+
+
+Face2Face Round 2: (1 hour)
+Given a number in an int variable, write a code print its value in words, covering all possible corner cases.
+Ex → 34567 = thirty four thousand five hundred and sixty seven.
+Negative test cases for the same.
+
+
+Face2Face Round 3: (1 hour 15 min)
+Question 1:
+Given a scheduler arrangement with some jobs having unique job ids and every job id has a number of tasks with unique task ids for that job.
+Example:-
+
+ Job id : 500    Task id : 700
+      Task id : 300
+      Task id : 350
+ Job id : 600    Task id : 400
+      Task id : 350
+      Task id : 600
+ Job id : 1000    Task id : 800
+      Task id : 100
+ Job id : 200    Task id : 650
+Write a Code for listing the job ids + task id combination in round robin fashion.
+Example:-
+
+Job id : 500    Task id : 700
+Job id : 600    Task id : 400
+Job id : 1000    Task id : 800
+Job id : 200    Task id : 650
+Job id : 500    Task id : 300
+Job id : 600    Task id : 350
+Job id : 1000    Task id : 100
+Job id : 500    Task id : 350
+Job id : 600    Task id : 600
+Choose any data structure of the input (array of structures or linked lists or queue).
+Design Test cases for the same.
+
+Question 2:
+Given a BST, create a Doubly Linked List from the same in place.
+Tree node -> left pointer = DLL node -> previous pointer
+Tree node -> right pointer = DLL node -> next pointer
+
+
+
+Face2Face Round 4: (with the Director) (1 hour approx)
+He asked typical HR questions like
+Why Microsoft?
+Where do you yourself 10n years from now? Blah blah.
+
+Question 1:
+Given a mess of 3 balls (colored red blue and white) write an algorithm + program with the most efficient way to sort them color wise. (Dutch National Flag Problem)
+
+Question 2:
+Given a string print the string with alternate occurrences of any character dropped.
+
+
+Example:-  input string    → It is a long day Dear.
+       Output string → tisalongdyDea. 
+Modification:- Consider alphabets with both cases as same occurrence.
+
+       Output string → Itsalongdy ea.
+Position was software Engineer 2. MSFT does not have SDE and SDET anymore, All roles shall be SE from now on.
+
+Thank you geeks for geeks. This site is a Marvel for job aspirants.
+
+If you like GeeksforGeeks and would like to contribute, you can also write an article and mail your article to contribute@geeksforgeeks.org. See your article appearing on the GeeksforGeeks main page and help other Geeks.
+
+
+
+
+-------
+Given a string of both uppercase and lowercase alphabets, the task is to print the string with alternate occurrences of any character dropped(including space and consider upper and lowercase as same).
+
+Input:
+First line consists of T test cases. First line of every test case consists of String S.
+
+Output:
+Single line output, print the updated string.
+
+Constraints:
+1<=T<=100
+1<=|String|<=10000
+
+Example:
+Input:
+2
+It is a long day dear.
+Geeks for geeks
+Output:
+It sa longdy ear.
+Geks fore
+
+Explanation:
+For the 1st test case. 
+Print first "I" and then ignore next "i". Similarly print first space then ignore next space. and so on.
+---------------
+
+Round 3: Write an algorithm to design an application for the timer utility. If some user ask for 30 secs and after its request has been processed another request come for 5 secs. Second request should be processed and first request should be handled similarly.
+
+Round 4: Given a date find whether bank is open on this date or not.
+
+
+Maximum Product Subarray
+Given an array that contains both positive and negative integers, find the product of the maximum product subarray. Expected Time complexity is O(n) and only O(1) extra space can be used.
+Examples:
+
+Input: arr[] = {6, -3, -10, 0, 2}
+Output:   180  // The subarray is {6, -3, -10}
+
+Input: arr[] = {-1, -3, -10, 0, 60}
+Output:   60  // The subarray is {60}
+
+Input: arr[] = {-2, -3, 0, -2, -40}
+Output:   80  // The subarray is {-2, -40}
+
+
+There are 2 sorted arrays A and B of size n each. Write an algorithm to find the median of the array obtained after merging the above 2 arrays(i.e. array of length 2n). The complexity should be O(log(n)).
+
+ Store a mirrored matrix ( Mat[i][j] == Mat[j][i] ) efficiently.
+ 
+ 
+ Round 2:
+
+1. Stream of urls coming, find out top trending topics
+General discussion around designing such a system in a distributed setup.
+
+2. Discussion on designing a spam email detection system.
+
+
+Count frequencies of all elements in array in O(1) extra space and O(n) time
+
+
+
+
+Round 1
+
+Discussion on authentication and authorization..OAuth 2. how it is used in your project
+Implement stack using queue and reverse of it
+find loop in a linklist and remove loop
+Discussion on sharding and distributed concepts.
+project discussion and role
+Round 2 :
+
+implement word search using LL and arrays only
+One design question for car factory.. basically checking DI for car and engine relationship
+Flipkart use case, what all web services and module you can think of and how load is distributed and then discussion on search service.
+Round 3 :
+
+Design discussion on dependency injection
+question related to https and database security
+Singleton pattern detail discussion
+project discussion
+Round 4 :
+
+One coding question, give next closest greater time e.g. 13:45 –>13:51
+Java concepts and JMM
+project discussion
+One challenging situation and how you handled it
+Round 5 :
+
+
+
+ 
+
+Purely based on projects and deep dive in core modules
+Round 6 :
+
+Project discussion
+Basic behavioral and scenario based questions
+All Practice Problems for Microsoft !
+
+
+Microsoft Interview Experience | Set 137 (For Software Engineer II)
+This was for Skype team. 2 Interviews with managers, 1 with partner.
+
+First Round (1.5 hour)
+
+Discussion on previous projects.
+Given a sorted integer array, print all distinct elements in array. The given array may contain duplicates and the output should print every element only once.
+Given a sorted integer array, print all elements that appear only once in array. The given array may contain duplicates and the output should print every element only once.
+Solution for both problems required space complexity O(1) & time complexity O(n).
+Design a system which helps to calculate average Skype call duration per day. In which events are tracked from mobile app. Need to take care of all edge cases like events can be logged to server in any sequence & there can be some events missing on server side also.
+Second Round (1 hour)
+
+Project discussions like most challenging project, most interesting problem I worked upon.
+Search an element in a sorted and rotated array. Consider all edge cases.
+Design & Implement LRU cache with all cases.
+Final Round (1.5 hour)
+
+Past Experience based questions.
+The Celebrity Problem. https://www.geeksforgeeks.org/the-celebrity-problem/
+Search Word “Microsoft” in a 2D matrix of characters.
+There are n petrol bunks located in a circle. We have a car with mileage 1kmpl. The distances between petrol bunks and no of litres petrol available at each petrol bunk is given. Need to find the starting point such that car can visit entire circle.
+
+
+
+
+
+Microsoft Interview Experience | Set 74 (For Software Engineer in IT Team)
+Have been interviewed for Microsoft India, Hyderabad location for their IT team for Software Engineer role.
+
+Following questions were asked in the first round telephonic interview
+
+1. How is C++ better than C?
+2. When do you use overloaded functions and when do you use overrided functions?
+
+3. I have a list of customer objects which in turn can contain a list of Order objects which in turn can contain a list of Item objects. Need a Reporting module that will be total amount of purchase done by each customer and total amount of purchase done by all the customers. What modifications has to be done in the classes?
+Ans: Gave few approaches but he was not satisfied.
+
+4. There are three different types of users – employee, admin and manager. Each user should have different permissions. How will you achieve this?
+Ans: Users will be the base class. Employee, admin and manager will be the derived classes. I was not sure of how to do this in the interview. But, thinking now. We can have overriden functions in each class of admin/employee/manager such that if the user does not have permission the function in that particular class can just return error without performing any action. If the user has permission, the actions can be defined in that function.
+
+
+
+ 
+
+5. Given a linked list, reverse the nodes from (n-x)th node. Given only x.
+Ans: Have two pointers. One pointer will be at the head node, increment the second pointer until it reaches xth node. Now increment both the pointers until the second pointer reaches end of the linked list. Now reverse the linked list from the first pointer location onwards
+
+6. In class car, accelerate() is a method that increases the velocity variable each time the method is called. The requirement is to alert the user when the velocity reaches it’s maximum limit.
+Ans: I told that we can change the accelerate() method to return a bool var of True whenever the limit is reached. He asked for other ways. I told the user can keep polling every time if the maximum limit has reached or not. He is not satisfied.
+
+If you like GeeksforGeeks and would like to contribute, you can also write an article and mail your article to contribute@geeksforgeeks.org. See your article appearing on the GeeksforGeeks main page and help other Geeks.
+
+
+
+Microsoft Interview Experience | Set 132 (Software Engineer for Bing Team)
+I recently attended Microsoft Interview for Software Engineer role in Bing Team.
+
+Round 1:
+Microsoft Interview Experience | Set 131
+
+Its initial screening round. It has happened through skype.
+Given n*n matrix with some elements in each cell. If there is “0” in any cell then we have to make that corresponding row and column to “0”
+Time complexity: O(n*n) Space complexity: O(1)
+Given an array of elements with size n. You should find the number which is repeated more than n/2 times
+Time complexity: O(n)
+
+After screening round, they asked me to come for 4 F2F rounds. I have visited Microsoft IDC hyderabad.
+
+
+Round 2:
+
+Given sorted array of numbers and a sum. we have to find any two numbers whose sum is equal to the given sum.
+Time Complexity: O(n)
+
+Given Binary tree with parent pointer and two nodes. Find LCA of the given two nodes in a given binary tree
+filter_none
+brightness_4
+struct TreeNode 
+{ 
+int data; 
+TreeNode *left,*right,*parent; 
+}; 
+Parent pointer of each node points to its parent. Root node’s parent pointer points to NULL
+
+Time Complexity: O(logn)
+
+Round 3:
+
+
+
+ 
+
+Given two linked lists. Find the intersection point of those two linkedlists
+Its based on Binary tree. I forgot the question 🙂
+Design discussion on Search functionality available in smart phones
+
+Round 4:
+
+Given a linkedlist with random pointer for each node which points to some random number in the given list. Clone the linkedlist
+filter_none
+brightness_4
+struct ListNode 
+{ 
+ int data; 
+ ListNode *next,*random; 
+}; 
+Design and implement DNS Cache.
+Requirements:
+Cache must be fixed in size and it will be decided by the user who wants to use this cache.
+If the entry is not available in Cache then it should call server to get the details of ipAddress and store it in cache.
+
+
+Round 5:
+
+Print given matrix in spiral order
+I forgot the question. It is related to arrays
+Design discussion on Top Trends feature available in facebook.
+If you like 
+
+
+
+
+Microsoft Interview Experience | Set 132 (Software Engineer for Bing Team)
+I recently attended Microsoft Interview for Software Engineer role in Bing Team.
+
+Round 1:
+Microsoft Interview Experience | Set 131
+
+Its initial screening round. It has happened through skype.
+Given n*n matrix with some elements in each cell. If there is “0” in any cell then we have to make that corresponding row and column to “0”
+Time complexity: O(n*n) Space complexity: O(1)
+Given an array of elements with size n. You should find the number which is repeated more than n/2 times
+Time complexity: O(n)
+
+After screening round, they asked me to come for 4 F2F rounds. I have visited Microsoft IDC hyderabad.
+
+
+Round 2:
+
+Given sorted array of numbers and a sum. we have to find any two numbers whose sum is equal to the given sum.
+Time Complexity: O(n)
+
+Given Binary tree with parent pointer and two nodes. Find LCA of the given two nodes in a given binary tree
+filter_none
+brightness_4
+struct TreeNode 
+{ 
+int data; 
+TreeNode *left,*right,*parent; 
+}; 
+Parent pointer of each node points to its parent. Root node’s parent pointer points to NULL
+
+Time Complexity: O(logn)
+
+Round 3:
+
+
+
+ 
+
+Given two linked lists. Find the intersection point of those two linkedlists
+Its based on Binary tree. I forgot the question 🙂
+Design discussion on Search functionality available in smart phones
+
+Round 4:
+
+Given a linkedlist with random pointer for each node which points to some random number in the given list. Clone the linkedlist
+filter_none
+brightness_4
+struct ListNode 
+{ 
+ int data; 
+ ListNode *next,*random; 
+}; 
+Design and implement DNS Cache.
+Requirements:
+Cache must be fixed in size and it will be decided by the user who wants to use this cache.
+If the entry is not available in Cache then it should call server to get the details of ipAddress and store it in cache.
+
+
+Round 5:
+
+Print given matrix in spiral order
+I forgot the question. It is related to arrays
+Design discussion on Top Trends feature available in facebook.
+If you like 
+
+
+
+
+Boggle (Find all possible words in a board of characters) | Set 1
+Given a dictionary, a method to do lookup in dictionary and a M x N board where every cell has one character. Find all possible words that can be formed by a sequence of adjacent characters. Note that we can move to any of 8 adjacent characters, but a word should not have multiple instances of same cell.
+
+Example:
+
+Input: dictionary[] = {"GEEKS", "FOR", "QUIZ", "GO"};
+       boggle[][]   = {{'G','I','Z'},
+                       {'U','E','K'},
+                       {'Q','S','E'}};
+      isWord(str): returns true if str is present in dictionary
+                   else false.
+
+Output:  Following words of dictionary are present
+         GEEKS
+         QUIZ
+Boggle
+
+We strongly recommend that you click here and practice it, before moving on to the solution.
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Easy Level
+
+
+
+Binary representation of a given 
+
+
+
+
+Find max in struct array
+
+Find if two rectangles overlap
+
+Calculate the difficulty of a sentence
+
+Check if a linked list is Circular Linked List
+
+Converting Decimal Number lying between 1 to 3999 to Roman Numerals
+
+Count distinct elements in every window of size k
+
+Count all possible paths from top left to bottom right of a mXn matrix
+
+Evaluate a boolean expression represented as string
+
+Find common elements in three sorted arrays
+
+Find the number closest to n and divisible by m
+
+Find position of the only set bit
+
+Find the Missing Number
+
+Inplace rotate square matrix by 90 degrees | Set 1
+
+k largest(or smallest) elements in an array | added Min Heap method
+
+Level Order Tree Traversal
+
+Merge Sort
+
+Run Length Encoding
+
+Sort all even numbers in ascending order and then sort all odd numbers in descending order
+Square root of an integer
+
+Stack Data Structure (Introduction and Program)
+
+URLify a given string (Replace spaces is %20)
+
+Find the middle of a given linked list in C and Java
+
+Write an Efficient Function to Convert a Binary Tree into its Mirror Tree
+
+Write one line C function to find whether a no is power of two
+
+Write your own atoi()
+
+Add two numbers represented by linked lists | Set 1
+
+Anagram Substring Search (Or Search for all permutations)
+
+Binary Search Tree | Set 1 (Search and Insertion)
+
+Boundary Traversal of binary tree
+
+Breadth First Traversal or BFS for a Graph
+
+Check if binary representation of a number is palindrome
+
+Construct Tree from given Inorder and Preorder traversals
+
+Convert a given tree to its Sum Tree
+
+Converting Roman Numerals to Decimal lying between 1 to 3999
+
+Count Inversions in an array | Set 1 (Using Merge Sort)
+
+Delete middle of linked list
+
+Design a stack that supports getMin() in O(1) time and O(1) extra space
+
+Diameter of a Binary Tree
+
+Dynamic Programming | Set 10 ( 0-1 Knapsack Problem)
+
+Dynamic Programming | Set 15 (Longest Bitonic Subsequence)
+
+Find all strings that match specific pattern in a dictionary
+
+Find Excel column name from a given column number
+
+Find the minimum element in a sorted and rotated array
+
+Find next greater number with same set of digits
+
+Find N'th item in a set formed by sum of two arrays
+
+Find the element that appears once
+
+Find the row with maximum number of 1s
+
+Find the two non-repeating elements in an array of repeating elements
+
+Function to check if a singly linked list is palindrome
+
+Generate n-bit Gray Codes
+
+Given only a pointer/reference to a node to be deleted in a singly lin
+
+How to determine if a binary tree is height-balanced?
+
+Intersection of two Sorted Linked Lists
+
+Length of the longest substring without repeating characters
+
+Level order traversal in spiral form
+
+Lowest Common Ancestor in a Binary Tree | Set 1
+
+Lowest Common Ancestor in a Binary Search Tree.
+
+Majority Element
+
+Maximum Product Subarray
+
+Maximum width of a binary tree
+
+Merge two sorted linked lists such that merged list is in reverse order
+
+Merge two sorted linked lists
+
+Microsoft Interview experience | Set 100 (On Campus for Internship on IDC and IT)
+Minimum time required to rot all oranges
+
+Mobile Numeric Keypad Problem
+
+Number of buildings facing the sun
+
+Pairwise swap elements of a given linked list
+
+Print a given matrix in spiral form
+
+Print a pattern without using any loop
+
+Print all Jumping Numbers smaller than or equal to a given value
+
+Print all subarrays with 0 sum
+
+Print BST keys in the given range
+
+Print level order traversal line by line
+
+Print nodes at k distance from root
+
+Print the string by ignoring alternate occurrences of any character
+
+Program to add two binary strings
+
+Program to validate an IP address
+
+Implement Queue using Stacks
+
+Remove all duplicates from a given string
+
+Remove every k-th node of the linked list
+
+Reverse Level Order Traversal
+
+Reverse words in a given string
+
+Root to leaf path sum equal to a given number
+
+Search a Word in a 2D Grid of characters
+
+Search an element in a sorted and rotated array
+
+Sort a linked list of 0s, 1s and 2s
+
+Sort an array of 0s, 1s and 2s
+
+Sorted insert for circular linked list
+
+Stock Buy Sell to Maximize Profit
+
+The Celebrity Problem
+
+Tree Isomorphism Problem
+
+Two elements whose sum is closest to zero
+
+Union and Intersection of two Linked Lists
+
+Given an a
+
+Write a function to reverse a linked list
+
+Write Code to Determine if Two Trees are Identical
+

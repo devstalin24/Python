@@ -1,0 +1,4 @@
+Aman's  salay is 100
+Ajay's  salay is 200
+Akash's  salay is 300
+Arun's  salay is 400
